@@ -4,18 +4,21 @@ package com.hellokoding.springboot;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import java.util.Date;
-import java.util.List;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
-import javax.persistence.CascadeType;
+import org.springframework.data.annotation.CreatedDate;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.util.Date;
 import javax.persistence.Column;
 
 @Entity
 @Table(name = "FMM_INFRASTRUCTURE" , schema="NAKUL")
+//@JsonIgnoreProperties(value = {"createdAt", "updatedAt"}, 
+//allowGetters = true)
 public class FmmInfrastructure  {
 
 	@Id
@@ -88,22 +91,15 @@ public class FmmInfrastructure  {
 	@Column(name="REMARKS")
 	private String remarks;
 	
+	
+	@Temporal(TemporalType.TIMESTAMP)
+    @CreatedDate
 	@Column(name="DATE_TIME")
 	private Date dateTime;
 	
 	@Column(name="USER_ID")
 	private String userId;
 	
-	//private List<FmmPhotoInfrastruture> fmmInfraPhoto;
-//	
-//	private FmmOrgMTable fmmOrgMTable;
-//
-//	 @OneToOne(mappedBy = "FMM_INFRASTRUCTURE")
-//	    private FmmOrgMTable getfmmOrgMTable() {
-//	        return fmmOrgMTable;
-//	    }
-//	
-//	
 	
 	
 	public String getIncharge() {
@@ -154,22 +150,6 @@ public class FmmInfrastructure  {
 		this.userId = userId;
 	}
 
-	/*
-//	cascade = CascadeType.ALL - Apply all cascading effects to the related entity. That is, 
-//			whenever we update/delete a User entity, update/delete the corresponding  as well.
-	
-	@OneToMany(cascade =  CascadeType.ALL)
-	//@JoinTable(name="FmmInfrastructure")
-    @JoinColumn(name = "ORG_SLNO")
-	private List<FmmOrgMTable> fmmOrgMTable;
-
-	public List<FmmOrgMTable> getFmmOrgMTable() {
-		return fmmOrgMTable;
-	}
-
-	public void setFmmOrgMTable(List<FmmOrgMTable> fmmOrgMTable) {
-		this.fmmOrgMTable = fmmOrgMTable;
-	}*/
 	
 }
 

@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -28,7 +29,7 @@ public class FmmOrgMTable {
 	@Column(name="ORG_DESC")
 	private String orgDesc;
 
-	//private FmmInfrastructure fmmInfrastructure;
+	
 	
 
 
@@ -65,36 +66,13 @@ public class FmmOrgMTable {
 	}
     
 	
-//	
-//	public FmmInfrastructure getfmmOrgInfrastructure() {
-//		return fmmInfrastructure;
-//	}
-//
-//	public void setFmmOrgInfrastructure(FmmInfrastructure fmmInfrastructure) {
-//		this.fmmOrgInfrastructure = fmmInfrastructure;
-//	}
 
 	public FmmOrgMTable() {
 		
 		super();
 	}
 	
-//	public FmmOrgMTable(Long orgSlNo, Long orgCode, String orgType, String orgDesc) {
-//		super();
-//		this.orgSlNo = orgSlNo;
-//		this.orgCode = orgCode;
-//		this.orgType = orgType;
-//		this.orgDesc = orgDesc;
-//
-//	}
 
-	
-//	 @OneToMany(cascade = CascadeType.ALL)
-//	    @JoinColumn(name = "ORG_SLNO")
-//	    private FmmInfrastructure fmmInfrastructure() {
-//	        return fmmInfrastructure;
-//	    }
-//	
 	
 	public FmmOrgMTable(Long orgSlNo, Long orgCode, String orgType, String orgDesc) {
 		super();
@@ -102,7 +80,7 @@ public class FmmOrgMTable {
 		this.orgCode = orgCode;
 		this.orgType = orgType;
 		this.orgDesc = orgDesc;
-		//this.fmmOrgInfrastructure = fmmInfrastructure;
+		
 	}
 
 	
@@ -117,6 +95,7 @@ public class FmmOrgMTable {
 		this.fmmInfrastructure = fmmInfrastructure;
 	}
 
+
 	@Override
 	public String toString() {
 		return "FmmOrgMTable [orgSlNo=" + orgSlNo + ", orgCode=" + orgCode + ", orgType=" + orgType + ", orgDesc="
@@ -124,11 +103,27 @@ public class FmmOrgMTable {
 	}
 
 
+	public List<FmmPhotoInfrastruture> getFmmPhotoInfrastrutures() {
+		return fmmPhotoInfrastrutures;
+	}
+
+	public void setFmmPhotoInfrastrutures(List<FmmPhotoInfrastruture> fmmPhotoInfrastrutures) {
+		this.fmmPhotoInfrastrutures = fmmPhotoInfrastrutures;
+	}
+
+
 	@OneToMany(cascade =  CascadeType.ALL)
 	
 	private List<FmmInfrastructure> fmmInfrastructure;
+	
+	
 
 
+
+	@OneToMany(cascade= CascadeType.ALL)
+	private  List<FmmPhotoInfrastruture> fmmPhotoInfrastrutures;
+
+	
 	
 	
 

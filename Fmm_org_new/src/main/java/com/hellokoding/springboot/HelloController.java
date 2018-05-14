@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import Repositories.FmmInfraRepository;
+import Repositories.PhotoUploadRepository;
 import Repositories.TableMainRepository;
 
 @Controller
@@ -24,8 +25,26 @@ public class HelloController {
  private TableMainRepository tableMainRepository;
 @Autowired	
 private FmmInfraRepository fmmInfraRepository;
+@Autowired
+private PhotoUploadRepository photoUploadRepository;
+
+
+public List<FmmPhotoInfrastruture> getAllphoto(){
+	return (List<FmmPhotoInfrastruture>) photoUploadRepository.findAll();
 	
+}
+
+@RequestMapping(value="/photo")
+public String  photo(Model model , @RequestParam(value="name1", required=false ,defaultValue="orgsl not found" ) Long  test4) {
+	List<FmmPhotoInfrastruture> fmmPhotoInfra=getAllphoto();
+	System.out.println(fmmPhotoInfra.size());
+	if(fmmPhotoInfra.size()>0)
+	test4=fmmPhotoInfra.get(0).getPhotoSlNo();
+	model.addAttribute("name1", "this part for test photo..");
+	return "hello";
 	
+}
+
     
 	public List<FmmInfrastructure> findByincharge(String incharge){
 		return fmmInfraRepository.findByincharge(incharge);

@@ -1,17 +1,24 @@
-/*package com.hellokoding.springboot;
+package com.hellokoding.springboot;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 
 @Entity
-@Table(name="FMM_PHOTO_INFRASTRUCTURE", schema="NAKUL")
+@Table(name = "FMM_PHOTO_INFRASTRUCTURE" , schema="NAKUL")
+//@JsonIgnoreProperties(value = {"createdAt", "updatedAt"}, 
+//allowGetters = true)
 public class FmmPhotoInfrastruture {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="ORG_SLNO")
@@ -48,12 +55,7 @@ public FmmPhotoInfrastruture(Long orgSlNo, byte[] photoUpload, Long photoSlNo) {
 	}
 
 
-//	
-//	 @GenericGenerator(name = "generator", strategy = "foreign")
-//     @Id
-//     @GeneratedValue(generator = "generator")
-//     @Column(name = "OrgSlNo", unique = true, nullable = false)
-	
+
 
 	public Long getPhotoSlNo() {
 		return PhotoSlNo;
@@ -73,4 +75,3 @@ public FmmPhotoInfrastruture(Long orgSlNo, byte[] photoUpload, Long photoSlNo) {
 	
 
 }
-*/
