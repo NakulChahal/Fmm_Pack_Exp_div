@@ -1,7 +1,6 @@
 package controller;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 //import org.springframework.context.annotation.ComponentScan;
@@ -10,12 +9,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
 import Repositories.FmmInfraRepository;
 import Repositories.PhotoUploadRepository;
 import Repositories.TableMainRepository;
-import pojo.files.webapp.FmmInfrastructure;
-import pojo.files.webapp.FmmOrgMTable;
-import pojo.files.webapp.FmmPhotoInfrastruture;
+import pojoclasses.FmmInfrastructure;
+import pojoclasses.FmmOrgMTable;
+import pojoclasses.FmmPhotoInfrastruture;
 
 @Controller
 @EnableJpaRepositories

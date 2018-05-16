@@ -1,6 +1,5 @@
 
-package pojo.files.webapp;
-
+package pojoclasses;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

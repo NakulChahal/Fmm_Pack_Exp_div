@@ -1,4 +1,4 @@
-package pojo.files.webapp;
+package pojoclasses;
 
 import java.util.List;
 
