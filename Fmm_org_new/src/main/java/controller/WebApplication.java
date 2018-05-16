@@ -1,4 +1,4 @@
-package pojo.files.webapp;
+package controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
