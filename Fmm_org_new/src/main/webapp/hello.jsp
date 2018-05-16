@@ -11,10 +11,6 @@
     hello ${test}
 </div>
 <div>
-    Hello ${name1}
-    hello ${test4}
-</div>
-<div>
     Hello1 ${name1}
     hello1 ${test1}
 </div>

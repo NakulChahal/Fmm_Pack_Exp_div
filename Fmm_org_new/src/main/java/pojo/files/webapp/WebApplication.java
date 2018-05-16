@@ -1,4 +1,4 @@
-package com.hellokoding.springboot;
+package pojo.files.webapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

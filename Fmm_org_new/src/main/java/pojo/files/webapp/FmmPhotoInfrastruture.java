@@ -1,4 +1,4 @@
-package com.hellokoding.springboot;
+package pojo.files.webapp;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

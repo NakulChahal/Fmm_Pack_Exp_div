@@ -1,4 +1,4 @@
-package com.hellokoding.springboot;
+package controller;
 
 import java.util.List;
 
@@ -10,11 +10,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-
 import Repositories.FmmInfraRepository;
 import Repositories.PhotoUploadRepository;
 import Repositories.TableMainRepository;
+import pojo.files.webapp.FmmInfrastructure;
+import pojo.files.webapp.FmmOrgMTable;
+import pojo.files.webapp.FmmPhotoInfrastruture;
 
 @Controller
 @EnableJpaRepositories
@@ -29,18 +30,19 @@ private FmmInfraRepository fmmInfraRepository;
 private PhotoUploadRepository photoUploadRepository;
 
 
-public List<FmmPhotoInfrastruture> getAllphoto(){
+
+public List<FmmPhotoInfrastruture> getAllphotodata(){
 	return (List<FmmPhotoInfrastruture>) photoUploadRepository.findAll();
 	
 }
 
 @RequestMapping(value="/photo")
-public String  photo(Model model , @RequestParam(value="name1", required=false ,defaultValue="orgsl not found" ) Long  test4) {
-	List<FmmPhotoInfrastruture> fmmPhotoInfra=getAllphoto();
+public String  photo(Model model , @RequestParam(value="name1", required=false ,defaultValue="orgsl not found" ) Long  test) {
+	List<FmmPhotoInfrastruture> fmmPhotoInfra=getAllphotodata();
 	System.out.println(fmmPhotoInfra.size());
-	if(fmmPhotoInfra.size()>0)
-	test4=fmmPhotoInfra.get(0).getPhotoSlNo();
-	model.addAttribute("name1", "this part for test photo..");
+	if(fmmPhotoInfra.size( )> 0)
+     test=fmmPhotoInfra.get(0).getPhotoSlNo();
+	model.addAttribute("test", test);
 	return "hello";
 	
 }
@@ -63,6 +65,11 @@ public String  photo(Model model , @RequestParam(value="name1", required=false ,
 	    return (List<FmmOrgMTable>) tableMainRepository.findAll();
 	}
 	
+//	@GetMapping("/FmmOrgMTable/{orgSlNo}/OrgType")
+//	public List<FmmOrgMTable> retrieveFmmtable(@PathVariable Long orgSlNo) {
+//		return tableMainRepository.retrieveOrgType(orgSlNo);
+//	}
+	
 	@RequestMapping(value = "/Data")
 	public String Demo(Model model , @RequestParam(value="name" ,defaultValue="xxxxxxxxxxxx") String test) {
 		List<FmmOrgMTable> listfmm=getAllData();
@@ -73,8 +80,13 @@ public String  photo(Model model , @RequestParam(value="name1", required=false ,
 	}
 	
 	
-	
-	
+//	
+//	@GetMapping("/FmmOrgMTable/{orgSlNo}/RohCapacity")
+//	public List<FmmOrgMTable> retriveorgsl(@PathVariable String studentId) {
+//		return tableMainRepository.retriveorgsl(orgSlNo);
+//	}
+
+
     @RequestMapping(value= {"/hello","/hello2"})
     public String hello1(Model model, @RequestParam(value="name", required=false, defaultValue="World") String test ,@RequestParam(value="name1", required=false, defaultValue="World") String test1) {
     	List<FmmOrgMTable> listFmmorg=getAllData();
@@ -147,13 +159,15 @@ public String  photo(Model model , @RequestParam(value="name1", required=false ,
 //        return "layout/hello";
 //    }
 //    
-   @RequestMapping(value="/annexureB", method=RequestMethod.GET)
+
+
+@RequestMapping(value="/annexureB", method=RequestMethod.GET)
     public String page3(Model model)  {
     	model.addAttribute("FmmOrgMTable");
     	return "layout/AnnexureB"; 
     }
     
-   /*  
+  /*   
     @RequestMapping(value="/annexureB", method=RequestMethod.POST)
     public String page3aSubmit(@ModelAttribute FmmInfrastructure fmmOrgInfrastructure,  Model model )  {
     	model.addAttribute("fmmOrgInfrastructure", fmmOrgInfrastructure);
@@ -161,8 +175,11 @@ public String  photo(Model model , @RequestParam(value="name1", required=false ,
     	
     	return "layout/AnnexureB"; 
     }
+    
     */
-    @RequestMapping(value="/annexureC" , method=RequestMethod.GET)
+  
+ 
+   @RequestMapping(value="/annexureC" , method=RequestMethod.GET)
     public String page4() {
     	return "layout/AnnexureC"; 
     }
@@ -183,4 +200,6 @@ public String  photo(Model model , @RequestParam(value="name1", required=false ,
     }
     
     }
+    
+  
     

@@ -1,4 +1,4 @@
-package com.hellokoding.springboot;
+package pojo.files.webapp;
 
 import java.util.List;
 
