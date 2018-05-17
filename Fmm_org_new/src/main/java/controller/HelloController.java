@@ -18,6 +18,7 @@ import Repositories.TableMainRepository;
 
 @Controller
 @EnableJpaRepositories
+//@RequestMapping("Subcontrol")
 //@ComponentScan("com.bd.service")
 public class HelloController {
 	
