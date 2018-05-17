@@ -1,6 +1,5 @@
 
-package pojoclasses;
-
+package controller;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;

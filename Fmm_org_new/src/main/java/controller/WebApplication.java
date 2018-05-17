@@ -1,20 +1,22 @@
 package controller;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import Repositories.TableMainRepository;
 
 
-@EnableJpaRepositories(basePackageClasses =TableMainRepository.class)
-//@EnableAutoConfiguration(exclude = HibernateJpaAutoConfiguration.class)
+@ComponentScan
+@EnableAutoConfiguration
 @SpringBootApplication
-
+@EnableJpaRepositories(basePackageClasses =TableMainRepository.class)
 public class WebApplication {
-   
-//	@Autowired
-//	 private TableMainRepository tableMainRepositort;
+  
+
+
 
     public static void main(String[] args) {
         SpringApplication.run(WebApplication.class, args);

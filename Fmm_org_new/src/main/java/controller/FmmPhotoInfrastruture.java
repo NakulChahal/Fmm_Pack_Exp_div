@@ -1,7 +1,9 @@
-package pojoclasses;
+package controller;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+
+import java.util.Arrays;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
@@ -14,6 +16,12 @@ import javax.persistence.Id;
 //@JsonIgnoreProperties(value = {"createdAt", "updatedAt"}, 
 //allowGetters = true)
 public class FmmPhotoInfrastruture {
+
+	@Override
+	public String toString() {
+		return "FmmPhotoInfrastruture [orgSlNo=" + orgSlNo + ", PhotoUpload=" + Arrays.toString(PhotoUpload)
+				+ ", PhotoSlNo=" + PhotoSlNo + "]";
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
