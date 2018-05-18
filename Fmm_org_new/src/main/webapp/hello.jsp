@@ -6,17 +6,17 @@
     <title>Hello</title>
 </head>
 <body>
-<div>
-    Hello ${name}
-    hello ${test}
-</div>
-<div>
-    Hello1 ${name1}
-    hello1 ${test1}
-</div>
+<!-- <div> -->
+<%--     Hello ${name} --%>
+<%--     hello ${test} --%>
+<!-- </div> -->
+<!-- <div> -->
+<%--     Hello1 ${name1} --%>
+<%--     hello1 ${test1} --%>
+<!-- </div> -->
 
 <div>
-Name   ${name }<br>
+<%-- Name   ${name }<br> --%>
 Test  ${test }<br>
 		${test1}<br>
 		${test2 }
