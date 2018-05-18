@@ -16,8 +16,10 @@
 </div>
 
 <div>
-Name   ${name }
-Test  ${test }
+Name   ${name }<br>
+Test  ${test }<br>
+		${test1}<br>
+		${test2 }
 </div>
 </body>
 </html>

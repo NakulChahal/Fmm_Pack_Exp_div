@@ -52,6 +52,27 @@ public String  photo(Model model , @RequestParam(value="name1", required=false ,
 		return fmmInfraRepository.findByincharge(incharge);
 	}
 	
+	
+	
+	
+	public List<FmmInfrastructure> findByorgSlNo(Long orgSlNo){
+		return  fmmInfraRepository.findByorgSlNo(orgSlNo);
+		
+	}
+	@RequestMapping(value="/orgslno")
+	public String Infra (Model model , @RequestParam(value="orgSlNo" ,defaultValue="xxxxxxx")  String test ) {
+		List<FmmInfrastructure> fmmInfrastructures=findByorgSlNo(Long.valueOf(25));
+		System.out.println(fmmInfrastructures.size());
+    	if(fmmInfrastructures.size()>0)
+		test=fmmInfrastructures.get(0).getPatternExam();
+    String	test1=fmmInfrastructures.get(0).getHeavyDutyFlooring();
+    Long test2=fmmInfrastructures.get(0).getTrackCenterDistanceBetweenLines();
+		model.addAttribute("test" ,test);
+		model.addAttribute("test1", test1);
+		model.addAttribute("test2", test2);
+		return "hello";
+	}
+	
 //	@RequestMapping(value="/hello" )
 //	public String hii(@RequestParam(value="name" ,defaultValue="Kuch Nahi mila") String name , @RequestParam("sirname") String sirname ,    Model model) {
 //		model.addAttribute("name", name);

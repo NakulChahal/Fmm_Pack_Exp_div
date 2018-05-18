@@ -146,6 +146,126 @@ public class FmmInfrastructure  {
 		this.userId = userId;
 	}
 
+	public Long getTrackCenterDistanceBetweenLines() {
+		return trackCenterDistanceBetweenLines;
+	}
+
+	public void setTrackCenterDistanceBetweenLines(Long trackCenterDistanceBetweenLines) {
+		this.trackCenterDistanceBetweenLines = trackCenterDistanceBetweenLines;
+	}
+
+	public String getHeavyDutyFlooring() {
+		return heavyDutyFlooring;
+	}
+
+	public void setHeavyDutyFlooring(String heavyDutyFlooring) {
+		this.heavyDutyFlooring = heavyDutyFlooring;
+	}
+
+	public String getNightWorking() {
+		return nightWorking;
+	}
+
+	public void setNightWorking(String nightWorking) {
+		this.nightWorking = nightWorking;
+	}
+
+	public String getSufficientIllumination() {
+		return sufficientIllumination;
+	}
+
+	public void setSufficientIllumination(String sufficientIllumination) {
+		this.sufficientIllumination = sufficientIllumination;
+	}
+
+	public String geteOTCane() {
+		return eOTCane;
+	}
+
+	public void seteOTCane(String eOTCane) {
+		this.eOTCane = eOTCane;
+	}
+
+	public String getSyncWhitingJackes() {
+		return syncWhitingJackes;
+	}
+
+	public void setSyncWhitingJackes(String syncWhitingJackes) {
+		this.syncWhitingJackes = syncWhitingJackes;
+	}
+
+	public String getWheelTurningLathe() {
+		return wheelTurningLathe;
+	}
+
+	public void setWheelTurningLathe(String wheelTurningLathe) {
+		this.wheelTurningLathe = wheelTurningLathe;
+	}
+
+	public String getWeldingFacilities() {
+		return weldingFacilities;
+	}
+
+	public void setWeldingFacilities(String weldingFacilities) {
+		this.weldingFacilities = weldingFacilities;
+	}
+
+	public String getdVRepair() {
+		return dVRepair;
+	}
+
+	public void setdVRepair(String dVRepair) {
+		this.dVRepair = dVRepair;
+	}
+
+	public String getSabrepair() {
+		return sabrepair;
+	}
+
+	public void setSabrepair(String sabrepair) {
+		this.sabrepair = sabrepair;
+	}
+
+	public String getUstfacility() {
+		return ustfacility;
+	}
+
+	public void setUstfacility(String ustfacility) {
+		this.ustfacility = ustfacility;
+	}
+
+	public String getPc() {
+		return pc;
+	}
+
+	public void setPc(String pc) {
+		this.pc = pc;
+	}
+
+	public String getPcsNetworkingFacility() {
+		return pcsNetworkingFacility;
+	}
+
+	public void setPcsNetworkingFacility(String pcsNetworkingFacility) {
+		this.pcsNetworkingFacility = pcsNetworkingFacility;
+	}
+
+	public String getTeleCommunicationFacility() {
+		return teleCommunicationFacility;
+	}
+
+	public void setTeleCommunicationFacility(String teleCommunicationFacility) {
+		this.teleCommunicationFacility = teleCommunicationFacility;
+	}
+
+	public String getFutureExtension() {
+		return futureExtension;
+	}
+
+	public void setFutureExtension(String futureExtension) {
+		this.futureExtension = futureExtension;
+	}
+
 	
 }
 

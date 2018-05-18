@@ -12,6 +12,7 @@ import controller.FmmInfrastructure;
 public interface FmmInfraRepository extends CrudRepository<FmmInfrastructure , Long> {
 	public  List<FmmInfrastructure> findByincharge(String incharge);
 
-	
+	public List<FmmInfrastructure> findByorgSlNo(Long orgSlNo);
+
 
 }
