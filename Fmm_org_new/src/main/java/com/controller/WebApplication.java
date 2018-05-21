@@ -1,4 +1,4 @@
-package controller;
+package com.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import Repositories.TableMainRepository;
+import com.controller.Repositories.TableMainRepository;
 
 
 @ComponentScan

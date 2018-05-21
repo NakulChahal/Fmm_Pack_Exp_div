@@ -1,4 +1,4 @@
-package controller;
+package com.controller;
 
 import java.util.List;
 
@@ -9,7 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import Repositories.TableMainRepository;
+import com.controller.Repositories.TableMainRepository;
+import com.controller.pojo.FmmOrgMTable;
 
 @Controller
 @EnableJpaRepositories

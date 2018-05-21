@@ -1,6 +1,5 @@
-package controller;
+package com.controller;
 
-import Repositories.*;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -11,8 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import Repositories.FmmInfraRepository;
-import Repositories.TableMainRepository;
+import com.controller.Repositories.*;
+import com.controller.pojo.FmmInfrastructure;
+import com.controller.pojo.FmmOrgMTable;
+import com.controller.pojo.FmmPhotoInfrastruture;
 
 
 

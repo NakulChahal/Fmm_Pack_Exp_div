@@ -1,4 +1,4 @@
-package controller;
+package com.controller.pojo;
 
 import java.util.List;
 import javax.persistence.CascadeType;

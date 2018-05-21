@@ -1,4 +1,4 @@
-package controller;
+package com.controller.pojo;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
